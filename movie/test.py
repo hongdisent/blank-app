@@ -1,8 +1,10 @@
-import pandas as pd
-movies_df = pd.read_excel("/workspaces/blank-app/movie.xlsx")
+import os
+import streamlit as st
 
-selected = ["action", "animation"]
+file_path = "movie.xlsx"
 
-
-#filter out all the movie in moviews_df that is genre isd in temp
-print(movies_df["genre"].apply(lambda x : any(gene in x for gene in selected)))
+if os.path.exists(file_path):
+    st.success("✅ File exists!")
+else:
+    st.error(f"❌ File NOT found in Streamlit Cloud! Current directory: {os.getcwd()}")
+    st.write("Files in this directory:", os.listdir())

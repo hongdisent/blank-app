@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 
 # Load the dataset
-movies_df = pd.read_excel("movie.xlsx")
+movies_df = pd.read_excel("./movie.xlsx")  
 
 # Title of the app
 st.title("Movie Recommendation App")
