@@ -1,4 +1,3 @@
-import imdb
 import pandas as pd
 import streamlit as st
 
